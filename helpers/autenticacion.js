@@ -14,6 +14,7 @@ export function generarToken(id) {
 
 export function verificarToken(req, res, next) {
     const { token } = req.cookies
+    console.log(token)
     if (!token) {
         return res.status(401).json({error:"No hay token de verificacion"})
     }
