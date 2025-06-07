@@ -50,6 +50,7 @@ class usuarioControllers {
             }
 
             const token = generarToken(usuarioExiste._id)
+            console.log(token)
 
             if (token) {
                 res.cookie("token", token, {
