@@ -21,7 +21,7 @@ app.use("/peliculas/funcionalidades", peliculasRoutes)
 
 
 try {
-    const port = process.env.port || 3000
+    const port = process.env.PORT || 5100
     app.listen(port, () => console.log(`El servidor esta conectado en el puerto ${port}`))
 } catch (error) {
     console.error(`No se pudo conectar con el servidor: ${error.message}`)
