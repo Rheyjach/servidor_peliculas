@@ -25,8 +25,8 @@ class usuarioControllers {
             if (token) {
                 res.cookie("token", token, {
                     httpOnly: true,
-                    secure: process.env.node_env === "produccion",
-                    sameSite: process.env.node_env === "produccion" ? "none" : "lax"
+                    secure: process.env.NODE_ENV === "production",
+                    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
                 })
                 res.status(201).json({ nombre: data.nombre })
             } else {
@@ -54,8 +54,8 @@ class usuarioControllers {
             if (token) {
                 res.cookie("token", token, {
                     httpOnly: true,
-                    secure: process.env.node_env === "produccion",
-                    sameSite: process.env.node_env === "produccion" ? "none" : "lax"
+                    secure: process.env.NODE_ENV === "production",
+                    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax"
                 })
                 res.status(200).json({ nombre: usuarioExiste.nombre })
             } else {
