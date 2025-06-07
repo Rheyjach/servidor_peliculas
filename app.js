@@ -18,6 +18,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 app.use("/peliculas/usuarios", usuariosRoutes)
 app.use("/peliculas/funcionalidades", peliculasRoutes)
+app.get("/", (req, res) => {
+  res.send("Backend funcionando correctamente");
+});
 
 
 try {
